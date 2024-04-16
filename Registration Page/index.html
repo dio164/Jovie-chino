@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="header">
-      <img src="/Dubem's remake/Registration Page/jovie-logo.png" alt="" />
+      <img src="jovie-logo.png" alt="" />
     </div>
     <div class="body-container">
       <div class="body">
@@ -223,7 +223,7 @@
           .then(() => {
             upload(firstName);
             alert("Successful Registration");
-            document.getElementById("reg-form").reset();
+            window.location.href = "https://jovie-login-page.vercel.app/"
           })
           .catch((error) => {
             console.error("Error:", error);
